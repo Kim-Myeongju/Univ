@@ -1,0 +1,17 @@
+1. if-elif-else
+   >>> if ~: #콜론
+
+2. BOOLEAN variable
+   >>> a = 3
+   >>> b = (a > 1) #변수 b에 True/False가 저장됨
+   #정수로 바꾸면... True=1, False=0
+   #정수를 boolean으로... 1이상=True, 0=False
+   >>> print(b) #True 출력
+
+3. (p.122~123) 읽어보기
+
+4. >>> import random
+   >>> random.randint(1, 100) #1부터 100까지 중 랜덤 숫자
+
+5. 조건연산자
+   >>> absolute_value = (x if x > 0 else -x) #x > 0 이면 x 저장, 아니면 -x 저장
