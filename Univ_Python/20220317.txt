@@ -1,0 +1,19 @@
+1. 지수 연산자 ** (ex. 2 ** 7 = 128)
+
+2. x, y = y, x (x와 y의 값을 swap)
+
+3. x, y, z = 10, 20, 30 (x=10, y=20, z=30)
+
+4. >>> s = "Hello World"
+   >>> s[0]
+   'H'
+   >>> s[-1]
+   'd'
+   (변수s에서 n번째 글자(n=0부터))
+
+5. name = "Harry Parter"
+   lower_name = name.lower() #'harry parter' 소문자로 변환
+   new_name = name.replace("Parter", "Porter") #'Harry Porter'
+   
+6. 나머지 연산자 %
+   몫 연산자 //
