@@ -1,8 +1,8 @@
 1. 지수 연산자 ** (ex. 2 ** 7 = 128)
 
-2. x, y = y, x (x와 y의 값을 swap)
+2. >>> x, y = y, x  # x와 y의 값을 swap
 
-3. x, y, z = 10, 20, 30 (x=10, y=20, z=30)
+3. >>> x, y, z = 10, 20, 30  # x=10, y=20, z=30
 
 4. >>> s = "Hello World"
    >>> s[0]
@@ -12,8 +12,32 @@
    (변수s에서 n번째 글자(n=0부터))
 
 5. name = "Harry Parter"
-   lower_name = name.lower() #'harry parter' 소문자로 변환
-   new_name = name.replace("Parter", "Porter") #'Harry Porter'
-   
+   >>> lower_name = name.lower() #'harry parter' 소문자로 변환
+   >>> new_name = name.replace("Parter", "Porter") #'Harry Porter'
+
 6. 나머지 연산자 %
    몫 연산자 //
+
+7. input("문자열") #문자열은 출력되고, 사용자가 입력한 값을 받는 함수
+   input() #사용자가 입력한 값을 받는 함수
+   # 변수이름 = input() 형태로 변수로 저장할 수 있음
+
+8. int(input("~"))
+   '''
+   입력받은 숫자를 문자열이 아닌 정수로 받아들임.
+   input함수는 문자열을 저장하지만 int()함수를 통해 문자열을 정수로 변환함.
+   '''
+
+9. <f-string>
+   print (f"{x}와 {y}의 합={x+y}")
+   >>> print(f"{x}+{y}={x+y}") #10+20=30
+
+10. "%.2f" #float 소수점 아래 두자리까지
+    >>> print("%.2f" %float변수) #float형 변수에 있는 실수를 .2f
+
+11. (사용금지, int()나 float()사용하기)
+    eval 함수는 문자열을 수식으로 처리해서 계산한 후,
+    계산 값을 함수의 결괏값으로 돌려준다.
+    >>> a = input("~")
+    >>> b = input("~")
+    >>> print(eval(a)+eval(b))
