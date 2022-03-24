@@ -1,0 +1,38 @@
+1. 논리 연산자 //and, or, not
+
+2. a > 0 and a < 3 // == 0<a<3
+
+3. random모듈 (+randrange함수)
+   >>> import random
+   >>> random.randrange(2) // 0 또는 1 랜덤출력
+
+4. 무한 반복
+   (1) for
+   (2) while + 조건
+       >>> while True // 무한반복
+       >>> break // while 루프에서 빠져나옴
+
+5. turtle모듈.Turtle // turtle 사용할때
+
+6. >>> import sys
+   >>> sys.exit() // 프로그램 종료 (sources > chap03 > control_turtle_mod.py 참고)
+
+7. turtle.textinput("", "도형을 입력하시오") // 첫번째 따옴표 안에는 입력창 상단에 표시되는 이름, 두번째 따옴표 안에는 안내메시지 출력
+
+8. for문
+   >>> for i in range(1000) // 0부터 999까지
+   >>> for i in range(1, 101) // 1부터 100까지!!
+   >>> for i in 시퀀스 // i에 시퀀스가 있는가(?)
+
+9. list
+   >>> alist = [] // 비어있는 리스트 생성 // alist = list() is also OK! (강의ppt 참고)
+   >>> alist.append(1) // 리스트에 정수 1을 추가한다
+   >>> alist = [1, 2, 3, 4, 5]
+   ///
+   >>> slist = ["영어", "수학", "국어"]
+   >>> slist[0] //리스트의 첫번째 항목인 "영어"
+   >>> slist[1] = "과학" //인덱스 1의 "수학"이 "국어"로 바뀜
+   >>> slist[-1] //"국어"
+   >>> for i in slist: //i에 slist의 원소들이 차례로 들어감
+           print(i)
+           //영어\n수학\n국어 출력
