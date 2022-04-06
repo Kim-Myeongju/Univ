@@ -1,29 +1,28 @@
 #include <stdio.h>
 
 int main() {
-    //ë³€ìˆ˜ ì„ ì–¸
     char depAndSchool[100];
     char studentID[10];
     char firstName[10];
     char lastName[10];
-    int birthYY, birthMM, birthDD;
+    char birthYY[2], birthMM[2], birthDD[2];
 
-    //<Please enter your information> ì •ë³´ ìž…ë ¥ë°›ê¸°
+    //<Please enter your information>¿¡¼­ Á¤º¸ ÀÔ·Â¹Þ±â 
     printf("<Please enter your information>\n");
     printf("\t1. Input your department/school: ");
-    scanf(" %[^\n]s", &depAndSchool);
+    scanf(" %[^\n]s", depAndSchool);
     printf("\t2. Input your student ID: ");
-    scanf(" %s", &studentID);
+    scanf(" %s", studentID);
     printf("\t3. Input your name (First Last): ");
-    scanf(" %s %s", &firstName, &lastName);
+    scanf(" %s %s", firstName, lastName);
     printf("\t4. Input your date of birth (yy mm dd): ");
-    scanf("%d %d %d", &birthYY, &birthMM, &birthDD);
+    scanf("%s %s %s", birthYY, birthMM, birthDD);
     printf("\n");
     
-    //<Student Information> ì¶œë ¥
+    //<Student Information>Á¤º¸ Ãâ·ÂÇÏ±â
     printf("<Student Information>\n");
     printf("\t1. Department/School: %s\n", depAndSchool);
     printf("\t2. Student ID: %s\n", studentID);
     printf("\t3. Last name: %s, First name: %s\n", lastName, firstName);
-    printf("\t4. Date of birth: year %d, month %d, day %d, or %d/%d/%d", birthYY, birthMM, birthDD, birthYY, birthMM, birthDD);
+    printf("\t4. Date of birth: year %s, month %s, day %s, or %s/%s/%s", birthYY, birthMM, birthDD, birthYY, birthMM, birthDD);
 }

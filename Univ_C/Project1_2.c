@@ -1,22 +1,22 @@
 #include <stdio.h>
 
 int main() {
-    //ë³€ìˆ˜ ì„ ì–¸
+    //º¯¼ö ¼±¾ğ 
     int num1, num2, num3;
     int productNum;
     int sumNum;
     float averageNum;
 
-    //ì„¸ ì •ìˆ˜ ì…ë ¥ë°›ê¸°
+    //¼¼ Á¤¼ö ÀÔ·Â¹Ş±â 
     printf("Input three different integers: ");
     scanf("%d %d %d", &num1, &num2, &num3);
 
-    //ê°’ ê³„ì‚° í›„ ê°ê°ì˜ ë³€ìˆ˜ì— ì €ì¥ (productNum, sumNum, averageNum)
+    //°ª °è»ê ÈÄ °¢°¢ÀÇ º¯¼ö¿¡ ÀúÀå(productNum, sumNum, averageNum)
     productNum = num1 * num2 * num3;
     sumNum = num1 + num2 + num3;
     averageNum = (float)sumNum / (float)3;
 
-    //ê²°ê³¼ ì¶œë ¥
+    //°á°ú Ãâ·Â 
     printf("<Entered number: %d %d %d>\n", num1, num2, num3);
     printf("\t1) The Product (%d*%d*%d) is %d\n", num1, num2, num3, productNum);
     printf("\t2) The Sum (%d+%d+%d) is %d\n", num1, num2, num3, sumNum);
