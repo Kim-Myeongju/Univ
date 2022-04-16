@@ -3,7 +3,7 @@
 # FILE NAME : solvingCh5ProgrammingProblems.py
 # AUTHOR :
 #   학과 & 학년: 컴퓨터공학과 1학년
-#   학번 & 이름: C211026 김명주
+#   학번 & 이름: C211026 김명주 
 # YYYYMMDD : 2022.04.16
 # PURPOSE : 점수에 따른 등급, 숫자를 한글로 변환, 최대공약수, 소수 출력 함수를 main()함수에서 차례대로 호출, 실행
 #
