@@ -1,19 +1,32 @@
 #include <stdio.h>
 
-int MyPower (int base, int exp) {
-    if (exp >= 1) {
-        return base * MyPower(base, exp-1); 
-    }
-    else {
-        return 1;
-    }
-} //exp°¡ 1º¸´Ù ÀÛ¾ÆÁö±â Àü±îÁö base°¡ °öÇØÁü. exp°¡ 1º¸´Ù ÀÛ¾ÆÁø´Ù¸é ±× Àü ÇÔ¼ö return°ª¿¡ 1ÀÌ °öÇØÁö°í Á¾·áµÈ´Ù. 
+int MyPower1(int base, int exp);
+int MyPower2(int base, int exp);
 
 int main() {
-    int inputBase=0, inputExp=0;
+    int inputBase = 0, inputExp = 0;
     printf("Input a base number:");
-    scanf(" %d", &inputBase);
+    scanf(" %d", &inputBase); //ï¿½Ø¼ï¿½(base)ï¿½Ô·Â¹Þ±ï¿½ 
     printf("Input an exponent number:");
-    scanf(" %d", &inputExp);
-    printf("%d^%d=%d", inputBase, inputExp, MyPower(inputBase,inputExp)); //¼¼ ¹øÂ° %d¿¡´Â, ÀÔ·Â¹ÞÀº inputBase¿Í inputExp¸¦ ÇÔ¼ö¿¡ Àü´ÞÇÏ¿© Ãâ·Â 
+    scanf(" %d", &inputExp); //ï¿½ï¿½ï¿½ï¿½(exponent)ï¿½Ô·Â¹Þ±ï¿½ 
+    printf("%d^%d=%d\n", inputBase, inputExp, MyPower1(inputBase, inputExp)); //loopï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ 
+    printf("%d^%d=%d\n", inputBase, inputExp, MyPower2(inputBase, inputExp)); //recursiveï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ 
+}
+
+int MyPower1(int base, int exp) { //loop(ï¿½Ýºï¿½)ï¿½ï¿½ï¿½ï¿½ 
+    int result = 1;
+    while(exp>=1) { //expï¿½ï¿½ 1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, expï¿½ï¿½ 1ï¿½ï¿½ï¿½ï¿½ ï¿½Û¾ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ýºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
+        result = result * base; //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ whileï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Úµå¸¦ ï¿½Ýºï¿½ï¿½ï¿½. ï¿½á±¹ baseï¿½ï¿½ expï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 
+        exp--;
+    }
+    return result; //ï¿½Ýºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ 
+}
+
+int MyPower2(int base, int exp) { //Recursive(ï¿½ï¿½ï¿½)ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ 
+    if (exp >= 1) {
+        return base * MyPower2(base, exp-1); //expï¿½ï¿½ 1ï¿½ï¿½ ï¿½Û¾ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç¸é¼­ baseï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½. 
+    }
+    else {
+        return 1; //expï¿½ï¿½ 1ï¿½ï¿½ï¿½ï¿½ ï¿½Û´Ù¸ï¿½ 1ï¿½ï¿½ ï¿½ï¿½È¯ï¿½ï¿½. ï¿½ï¿½ï¿½Ì»ï¿½ ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½ ï¿½Ç¹Ç·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç¾ï¿½ ï¿½ï¿½ï¿½ï¿½.
+    }
 }
