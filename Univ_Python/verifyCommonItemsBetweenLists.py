@@ -39,9 +39,8 @@ def getSortedCommonItems(list1, list2):
     list3 = [list1[i] for i in range(len(list1)) for j in range(len(list2)) if list1[i] == list2[j]]
     # 리스트 함축을 사용하여 리스트 생성
     # list1[i] == list2[j]이면, 즉 공통 구성원이라면 그 list1[i]의 값을 list3에 저장. for문에 의해 i는 0부터 (len(list1)-1)까지, j는 0부터 (len(list2)-1)까지 반복
+    list4 = list(list3) # 공통 구성원을 저장한 리스트 list3을 deep copy (깊은 복사)
     list3.sort() # 공통 구성원을 저장한 리스트를 작은 수부터 정렬
-    list4 = [list1[i] for i in range(len(list1)) for j in range(len(list2)) if list1[i] == list2[j]]
-    # 리스트 함축을 사용하여 리스트 생성
     list4.sort(reverse = True) # 공통 구성원이 들어있는 list4를 큰 수부터 정렬
     return list3, list4 # ascending order, descending order에 해당하는 리스트를 각각 반환
 
