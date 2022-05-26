@@ -122,5 +122,6 @@ void Menu4_inverse(int* arr, int row) {
 }
 
 void Menu5_calculation(int* arr, int row, char operator) {
-    if
+    if (operator == '+') {
+    }
 }
